@@ -9,11 +9,13 @@ import com.adril.dao.GenreDao;
 import com.adril.entity.Genre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Mirai
  */
+@Component
 public class IntegerToGenre implements Converter<String , Genre>{
 
     @Autowired

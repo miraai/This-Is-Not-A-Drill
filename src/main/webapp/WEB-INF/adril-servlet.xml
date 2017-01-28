@@ -34,6 +34,7 @@
  
     <bean id="genreDao" class="com.adril.dao.impl.GenreDaoImpl"></bean>
     <bean id="gameDao" class="com.adril.dao.impl.GameDaoImpl"></bean>
+    <bean id="shopDao" class="com.adril.dao.impl.ShopDaoImpl"></bean>
 
     <bean id="persistenceExceptionTranslationPostProcessor"
           class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
@@ -52,6 +53,7 @@
             <set>
                 <bean class="com.adril.converter.IntegerToGenre" />
                 <bean class="com.adril.converter.IntegerToGame" />
+                <bean class="com.adril.converter.IntegerToShop" />
             </set>
         </property>
     </bean>

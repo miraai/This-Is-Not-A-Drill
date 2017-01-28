@@ -5,8 +5,8 @@
  */
 package com.adril.converter;
 
-import com.adril.dao.GameDao;
-import com.adril.entity.Game;
+import com.adril.dao.ShopDao;
+import com.adril.entity.Shop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
@@ -16,19 +16,19 @@ import org.springframework.stereotype.Component;
  * @author Mirai
  */
 @Component
-public class IntegerToGame implements Converter<String , Game>{
+public class IntegerToShop implements Converter<String , Shop>{
     
     @Autowired
-    GameDao gameDao;
+    ShopDao shopDao;
     
     @Override
-    public Game convert(String s) {
+    public Shop convert(String s) {
         if(s.isEmpty()){
             return null;
         }
         Integer valeu = Integer.valueOf(s);
-        Game gem = gameDao.getGameById(valeu);
-        return gem;
+        Shop sho = shopDao.getShopById(valeu);
+        return sho;
     }
     
 }

@@ -49,11 +49,13 @@
                             <c:url var="index"  value="/" />
                             <c:url var="addGenre"  value="/addGenre" />
                             <c:url var="addGame"  value="/addGame" />
+                            <c:url var="addShop"  value="/addShop" />
                             
                             <li class="<%=  (pageName.equals("index.jsp")) ? "active" : ""%>"><a href="${index}">Index</a></li>
                             <li class="<%=  (pageName.equals("addGenre.jsp")) ? "active" : ""%>"><a href="${addGenre}">Add Genre</a></li>
                             <li class="<%=  (pageName.equals("addGame.jsp")) ? "active" : ""%>"><a href="${addGame}">Add Game</a></li>
-                       
+                            <li class="<%=  (pageName.equals("addShop.jsp")) ? "active" : ""%>"><a href="${addShop}">Add Shop</a></li>
+                            
                         </ul>
                     </div>
                 </div>
