@@ -15,6 +15,7 @@ import java.util.List;
 public interface GenreDao {
     public List<Genre> getGenreList();
     public Genre addGenre(Genre genre);
+    public void editGenre(Genre genre);
     public Genre getGenreById(Integer id);
     public boolean deleteGenre(Genre genre);
 }

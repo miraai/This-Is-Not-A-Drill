@@ -75,6 +75,11 @@ public class GenreDaoImpl implements GenreDao{
             return false;
         }
     }
+
+    @Override
+    public void editGenre(Genre genre) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

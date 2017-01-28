@@ -16,6 +16,7 @@ public interface MerchandiseDao {
     public List<Merchandise> getMerchandiseList();
     public Merchandise addMerchandise(Merchandise merchandise);
     public Merchandise getMerchandiseById(Integer id);
+    public void editMerchandise(Merchandise merchandise);
     public boolean deleteMerchandise(Merchandise merchandise);
     public List<Merchandise> merchandiseByShopId(Integer id);
     public List<Merchandise> merchandiseByGameId(Integer id);

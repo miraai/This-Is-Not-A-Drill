@@ -16,6 +16,7 @@ public interface GameDao {
     public List<Game> getGameList();
     public Game addGame(Game game);
     public Game getGameById(Integer id);
+    public void editGame(Game game);
     public boolean deleteGame(Game game);
     public List<Game> gamesByGenreId(Integer id);
 }

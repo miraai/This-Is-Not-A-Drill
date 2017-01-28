@@ -15,6 +15,7 @@ import java.util.List;
 public interface ShopDao {
     public List<Shop> getShopList();
     public Shop addShop(Shop shop);
+    public void editShop(Shop shop);
     public Shop getShopById(Integer id);
     public boolean deleteShop(Shop shop);
 }

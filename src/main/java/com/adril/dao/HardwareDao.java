@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 public interface HardwareDao{
     public List<Hardware> getHardwareList();
     public Hardware addHardware(Hardware hardware);
+    public void editHardware(Hardware hardware);
     public Hardware getHardwareById(Integer id);
     public boolean deleteHardware(Hardware hardware);
 }

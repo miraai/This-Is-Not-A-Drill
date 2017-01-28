@@ -89,5 +89,10 @@ public class GameDaoImpl implements GameDao{
             return null;
         }
     }
+
+    @Override
+    public void editGame(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

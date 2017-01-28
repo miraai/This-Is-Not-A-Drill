@@ -76,5 +76,10 @@ public class HardwareDaoImpl implements HardwareDao{
             return false;
         }
     }
+
+    @Override
+    public void editHardware(Hardware hardware) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
