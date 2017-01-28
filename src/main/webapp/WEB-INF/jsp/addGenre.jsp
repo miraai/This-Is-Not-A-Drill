@@ -19,9 +19,9 @@
             <%= (success != null) ? "<div class=\"alert alert-success\">" + success + "</div>" : ""%>
             <div class="form-group">
                 <form:label path="name">
-                    Game Name
+                    Genre Name
                 </form:label>
-                <form:input type="name" class="form-control" id="name" placeholder="Game name" path="name" />
+                <form:input type="name" class="form-control" id="name" placeholder="Genre name" path="name" />
             </div>
 
             <form:input type="hidden" id="id" class="form-control" placeholder="id" path="id" />
@@ -34,7 +34,7 @@
             <table class="table table-striped mojatabela">
                 <thead>
                     <tr>
-                        <th>Game Name</th>
+                        <th>Genre Name</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>

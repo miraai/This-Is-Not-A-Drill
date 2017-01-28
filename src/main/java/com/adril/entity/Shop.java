@@ -1,21 +1,20 @@
-package com.adril.entity;
-
-import java.io.Serializable;
-import javax.persistence.*;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.adril.entity;
+
+import java.util.Objects;
+import javax.persistence.*;
 
 /**
  *
  * @author Mirai
  */
 @Entity
-@Table(name = "game")
-public class Game implements Serializable{
+@Table(name = "shop")
+public class Shop {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,17 +22,13 @@ public class Game implements Serializable{
     @Column(name = "id")
     private Integer id;
     
-    @Column(name = "name", length = 50)
+    @Column(name = "name")
     private String name;
     
-    @Column(name = "price")
-    private double price;
-    
-    @JoinColumn(name = "genreId", referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Genre genreId;
+    @Column(name = "address")
+    private String address;
 
-    public Game() {
+    public Shop() {
     }
 
     public Integer getId() {
@@ -52,20 +47,12 @@ public class Game implements Serializable{
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public String getAddress() {
+        return address;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Genre getGenreId() {
-        return genreId;
-    }
-
-    public void setGenreId(Genre genreId) {
-        this.genreId = genreId;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
@@ -78,10 +65,10 @@ public class Game implements Serializable{
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Game)) {
+        if (!(object instanceof Shop)) {
             return false;
         }
-        Game other = (Game) object;
+        Shop other = (Shop) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -90,7 +77,7 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "Game{" + "name=" + name + '}';
+        return "Shop{" + "id=" + id + ", name=" + name + ", address=" + address + '}';
     }
     
 }

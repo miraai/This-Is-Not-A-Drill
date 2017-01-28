@@ -35,7 +35,7 @@ public class GenreController {
         return "addGenre";
     }
     
-    @RequestMapping(value = "addGenre", method = RequestMethod.POST)
+    @RequestMapping(value = "/addGenre", method = RequestMethod.POST)
     public ModelAndView addGenre(@ModelAttribute("genre") Genre genre, ModelAndView model){
         genre = genreDao.addGenre(genre);
         model.addObject("successMsg", "Genre Added!");
@@ -45,7 +45,7 @@ public class GenreController {
         return model;
     }
     
-    @RequestMapping(value = "editGenre/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/editGenre/{id}", method = RequestMethod.GET)
     public String editGenre(@PathVariable("id") int id, Model model){
         Genre genre = genreDao.getGenreById(id);
         model.addAttribute("genre", genre);
@@ -54,7 +54,7 @@ public class GenreController {
         return "addGenres";
     }
     
-    @RequestMapping(value = "deleteGenre/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/deleteGenre/{id}", method = RequestMethod.GET)
     public String deleteGenre(@PathVariable("id") int id, HttpServletRequest request){
         Genre genre = genreDao.getGenreById(id);
         if (genre == null){

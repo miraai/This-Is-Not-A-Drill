@@ -5,9 +5,7 @@
  */
 package com.adril.entity;
 
-import java.util.Objects;
 import javax.persistence.*;
-
 
 /**
  *

@@ -33,6 +33,7 @@
     </bean>
  
     <bean id="genreDao" class="com.adril.dao.impl.GenreDaoImpl"></bean>
+    <bean id="gameDao" class="com.adril.dao.impl.GameDaoImpl"></bean>
 
     <bean id="persistenceExceptionTranslationPostProcessor"
           class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
@@ -50,6 +51,7 @@
         <property name="converters">
             <set>
                 <bean class="com.adril.converter.IntegerToGenre" />
+                <bean class="com.adril.converter.IntegerToGame" />
             </set>
         </property>
     </bean>
