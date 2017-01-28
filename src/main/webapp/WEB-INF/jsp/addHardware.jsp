@@ -1,6 +1,6 @@
 <%-- 
-    Document   : addShop
-    Created on : Jan 28, 2017, 5:20:23 PM
+    Document   : addHardware
+    Created on : Jan 28, 2017, 6:04:56 PM
     Author     : Mirai
 --%>
 
@@ -10,23 +10,23 @@
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 
 <%@include file="partials/header.jsp" %>
-<h1>Add Genre</h1>
+<h1>Add Hardware</h1>
 <div class="container">
     <div class="col-md-6 col-md-offset-3">
-        <c:url var="dodajShop" value="/addShop" ></c:url>
-        <form:form method="POST" action="${dodajShop}" modelAttribute="shop">
+        <c:url var="dodajHardware" value="/addHardware" ></c:url>
+        <form:form method="POST" action="${dodajHardware}" modelAttribute="hardware">
             <% String success = (String) request.getAttribute("successMsg");%>
             <%= (success != null) ? "<div class=\"alert alert-success\">" + success + "</div>" : ""%>
             <div class="form-group">
                 <form:label path="name">
-                    Shop Name
+                    Hardware Name
                 </form:label>
-                <form:input type="name" class="form-control" id="name" placeholder="Shop name" path="name" />
+                <form:input type="name" class="form-control" id="name" placeholder="Hardware name" path="name" />
                 
-                <form:label path="address">
-                    Shop Address
+                <form:label path="price">
+                    Hardware Price
                 </form:label>
-                <form:input type="address" class="form-control" id="address" placeholder="Shop Address" path="address" />
+                <form:input type="price" class="form-control" id="price" placeholder="Hardware Price" path="price" />
             </div>
 
             <form:input type="hidden" id="id" class="form-control" placeholder="id" path="id" />
@@ -34,25 +34,25 @@
         </form:form>
     </div>
     <div class="col-md-8 col-md-offset-2">
-        <c:if test="${!empty shops}">
+        <c:if test="${!empty hardwares}">
 
             <table class="table table-striped mojatabela">
                 <thead>
                     <tr>
-                        <th>Shop Name</th>
-                        <th>Shop Address</th>
+                        <th>Hardware Name</th>
+                        <th>Hardware Price</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody> 
-                    <c:forEach items="${shops}" var="sho">
+                    <c:forEach items="${hardwares}" var="hard">
 
                         <tr>
-                            <td>${sho.name}</td>
-                            <td>${sho.address}</td>
-                            <td><a href="<c:url value='/editShop/${sho.id}' />">edit</a></td>
-                            <td><a href="<c:url value='/deleteShop/${sho.id}' />">delete</a></td>
+                            <td>${hard.name}</td>
+                            <td>${hard.price}</td>
+                            <td><a href="<c:url value='/editHardware/${hard.id}' />">edit</a></td>
+                            <td><a href="<c:url value='/deleteHardware/${hard.id}' />">delete</a></td>
                         </tr>
                     </c:forEach>
                 </tbody>

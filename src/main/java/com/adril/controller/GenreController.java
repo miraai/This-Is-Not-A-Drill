@@ -24,6 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class GenreController {
+    
     @Autowired
     private GenreDao genreDao;
     

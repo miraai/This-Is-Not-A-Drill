@@ -3,7 +3,7 @@
     Created on : Jan 28, 2017, 2:03:22 AM
     Author     : Mirai
 --%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -14,7 +14,7 @@
 <div class="container">
     <div class="col-md-6 col-md-offset-3">
         <c:url var="dodajGenre" value="/addGenre" ></c:url>
-        <form:form method="POST" action="${addGenre}" modelAttribute="genre">
+        <form:form method="POST" action="${dodajGenre}" modelAttribute="genre">
             <% String success = (String) request.getAttribute("successMsg");%>
             <%= (success != null) ? "<div class=\"alert alert-success\">" + success + "</div>" : ""%>
             <div class="form-group">
